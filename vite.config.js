@@ -17,9 +17,11 @@ export default defineConfig({
   build: {
     outDir: "dist",
     rollupOptions: {
-      main: resolve(__dirname, "index.html"),
-      registration: resolve(__dirname, "registration.html"),
-      chats: resolve(__dirname, "chats.html"),
+      input: {
+        main: resolve(__dirname, "index.html"),
+        registration: resolve(__dirname, "registration.html"),
+        chats: resolve(__dirname, "chats.html"),
+      },
     },
   },
   server: {
