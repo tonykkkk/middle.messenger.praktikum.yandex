@@ -14,6 +14,14 @@ export default defineConfig({
       reloadOnPartialChange: true,
     }),
   ],
+  build: {
+    outDir: "dist",
+    rollupOptions: {
+      main: resolve(__dirname, "index.html"),
+      registration: resolve(__dirname, "registration.html"),
+      chats: resolve(__dirname, "chats.html"),
+    },
+  },
   server: {
     port: 3000,
   },
