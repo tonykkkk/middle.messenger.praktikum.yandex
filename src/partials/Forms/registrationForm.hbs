@@ -2,13 +2,13 @@
 <div class="input-container"> 
     {{>inputHeader text="Регистрация"}}
     <form class="form-vertical" action="chats.html" method="POST">
-    {{>input placeholder="Почта" type="email" }}
-{{>input placeholder="Логин" type="login" }}
-{{>input placeholder="Имя" type="text" }}
-{{>input placeholder="Фамилия" type="text" }}
-{{>input placeholder="Телефон" type="tel" }}
-{{>input placeholder="Пароль" type="password" }}
-{{>input placeholder="Пароль (еще раз)" type="password" }}
+    {{>input placeholder="Почта" name="email" type="email" }}
+{{>input placeholder="Логин" name="login" type="login" }}
+{{>input placeholder="Имя" name="first_name" type="text" }}
+{{>input placeholder="Фамилия" name="second_name" type="text" }}
+{{>input placeholder="Телефон" name="phone" type="tel" }}
+{{>input placeholder="Пароль"  name="password" type="password" }}
+{{>input placeholder="Пароль (еще раз)" name="password_again" type="password" }}
 <div class="space"></div>
 {{>submit buttonName="Зарегистрироваться"}} 
 </form>
