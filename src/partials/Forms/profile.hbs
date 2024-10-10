@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/style.css"  />
+<div class="profileLayout">
+    {{>navigationBack id="backToChat"}}
+    <div class="profile-info">
+    <img src="{{avatarUrl}}" class="profile-info__avatar" alt="link" />
+    <h1 class="profile-info__header">{{userName}}</h1>
+    {{>infoRow caption="Почта"  value="pochta@yandex.ru"}}
+    {{>infoRow caption="Логин" value="ivanivanov"}}
+    {{>infoRow caption="Имя" value="Иван"}}
+    {{>infoRow caption="Фамилия" value="Иванов"}}
+    {{>infoRow caption="Имя в чате" value="Иван"}}
+    {{>infoRow caption="Телефон" value="+7 (909) 967 30 30"}}
+    {{>linkRow }}
+    {{>linkRow caption="Изменить данные" href="profileEdit.html"}}
+    {{>linkRow caption="Изменить пароль" href="passwordChange.html"}}
+    {{>linkRow caption="Выйти" href="index.html"}}
+    </div>
+<div>

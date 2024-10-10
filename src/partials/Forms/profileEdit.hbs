@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/style.css"  />
+<div class="profileLayout">
+    {{>navigationBack id="backToChat"}}
+    <div class="profile-info">
+    <img src="{{avatarUrl}}" class="profile-info__avatar" alt="link" />
+    <h1 class="profile-info__header">{{userName}}</h1>
+    <form action="profile.html" method="POST">
+    {{>editRow caption="Почта" type="email" value="pochta@yandex.ru"}}
+    {{>editRow  caption="Логин" type="text" value="ivanivanov"}}
+    {{>editRow  caption="Имя" type="text" value="Иван"}}
+    {{>editRow  caption="Фамилия" type="text" value="Иванов"}}
+    {{>editRow  caption="Имя в чате" type="text" value="Иван"}}
+    {{>editRow  caption="Телефон" type="tel" value="+7 (909) 967 30 30"}}
+    {{>submit buttonName="Сохранить"}} 
+    </form>
+    
+    </div>
+<div>

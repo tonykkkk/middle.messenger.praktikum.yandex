@@ -1,0 +1,22 @@
+.app{
+    display: flex;
+    height: 100vh;
+    flex: 1;
+}
+
+.leftPanel{
+    justify-self: flex-start;
+    width: 320px;
+    background:  rgba(251, 251, 251, 1);
+    padding: 10px;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* Edge, Internet Explorer */
+    scrollbar-width: none; /* Firefox */
+}
+.leftPanel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    }
+
+.rightPanel{
+    flex: 1;
+}

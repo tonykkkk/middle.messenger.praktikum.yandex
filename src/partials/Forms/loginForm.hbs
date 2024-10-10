@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/style.css"  />
+<div class="input-container"> 
+     {{>inputHeader text="Вход"}}
+<form class="form-vertical" action="chats.html" method="POST">
+   
+{{>input placeholder="Логин" type="login" }}
+{{>input placeholder="Пароль" type="password" }}
+<div class="space"></div>
+{{>submit buttonName="Авторизоваться"}} 
+</form>
+
+
+{{>link href="registration.html" text="Нет аккаунта?"}}
+</div>

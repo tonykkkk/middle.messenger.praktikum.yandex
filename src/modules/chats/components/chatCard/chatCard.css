@@ -1,0 +1,88 @@
+.chatCard{
+    display: flex;
+    flex-direction: row;
+    
+    height: 47px;
+    border-top-style: solid ;
+    border-top-color: rgb(226, 226, 226);
+    border-top-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.chatCard:focus{
+    background-color: rgba(228, 237, 253, 1) ;
+}
+
+.chatCardAvatar {
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    
+}
+
+.chatLastMessage {
+    display: flex;
+ font-size: 12px;
+ margin-top: 3px;
+  margin-bottom: 0px;
+  padding: 0px;
+  flex:1;
+  padding-left: 10px;
+ padding-right: 10px;
+    overflow-y: auto;
+}
+
+.chatTitle{
+  font-weight: 600;
+  font-size: 13px;
+  padding-left: 10px;
+padding-right: 10px;
+  margin-bottom: 0px;
+  
+  line-height: 15px;
+  flex: 1;
+}
+
+.chatUnreadCount {
+    display: flex;
+    font-weight: 500;
+    font-size: 11px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(51, 105, 243, 1);
+    text-align: center;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+.chatLastMessageBox{
+    display: flex;
+    
+    align-items: center;
+   
+    padding-right: 10px;
+    margin: 0px;
+    flex: 1;
+    align-items:start;
+}
+.chatTitleBox{
+    
+ height: 16px;
+ display: flex;
+ align-items: end;
+ 
+}
+.chatInfoBox{
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+   }
+.chatDate{
+    font-weight: 600;
+    font-size: 9px;
+    margin: 0px;
+    padding-right: 10px; 
+   }
