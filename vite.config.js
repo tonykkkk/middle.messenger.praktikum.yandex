@@ -24,7 +24,7 @@ export default defineConfig({
         notfound: resolve(__dirname, "404.html"),
         error: resolve(__dirname, "500.html"),
         chatAnton: resolve(__dirname, "chatAnton.html"),
-        passwordChange: resolve(__dirname, "paswordChange.html"),
+        passwordChange: resolve(__dirname, "passwordChange.html"),
         profile: resolve(__dirname, "profile.html"),
         profileEdit: resolve(__dirname, "profileEdit.html"),
       },
