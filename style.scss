@@ -1,16 +1,26 @@
 $primary-color: rgba(51, 105, 243, 1);
 // $secondary-color: rgb(201, 201, 201);
 $secondary-color: rgba(234, 234, 234, 1);
+$bg-secondary-color: rgba(251, 251, 251, 1);
+$hover-secondary-color:rgb(236, 244, 253);
 $primary-light-color: rgb(87, 132, 245);
 $messageBackgroundIn: rgba(248, 248, 248, 1);
 $messageBackgroundOut: rgba(228, 237, 253, 1);
+
+$text-dark: rgba(0, 0, 0, 1);
+$text-light: white;
+$text-secondary: rgb(153, 153, 153);
+$invalid: rgb(243, 80, 51); 
+
+
+$bg-animation: background-color 0.25s;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   font-weight: 400;
 
-  color: rgba(0, 0, 0, 1);
+  color: $text-dark;
 }
 a {
   font-weight: 500;
@@ -50,9 +60,9 @@ input[type="submit"] {
   font-weight: 500;
   font-family: inherit;
   background-color: $primary-color;
-  color: white;
+  color: $text-light;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: $bg-animation;
   justify-content: center;
   flex-wrap: nowrap;
 }
@@ -71,7 +81,7 @@ button {
   font-family: inherit;
   background-color: $primary-color;
 
-  color: white;
+  color: $text-light;
   cursor: pointer;
   transition: background-color 0.25s;
   justify-content: center;
@@ -110,7 +120,7 @@ button:hover {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: $text-dark;
   border-color: transparent;
   background-color: transparent;
   background-clip: padding-box;
@@ -121,7 +131,7 @@ button:hover {
 }
 
 .input:focus {
-  color: #212529;
+  color: $text-dark;
   background-color: transparent;
   border-color: transparent;
   outline: 0;
@@ -131,12 +141,12 @@ button:hover {
 }
 
 .input::placeholder {
-  color: #212529;
+  color: $text-dark;
   opacity: 0.4;
   font-size: 16px;
 }
 .input:invalid:not(:placeholder-shown):not(:focus) {
-  border-bottom: rgb(243, 80, 51);
+  border-bottom: $invalid;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -155,9 +165,11 @@ button:hover {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.profileLayout {
+.profile-layout {
   display: flex;
   flex: 1;
+  align-items: stretch;
+  margin: 0;
 }
 .info-row {
   display: flex;
@@ -191,15 +203,17 @@ button:hover {
 .navigation-back {
   display: flex;
   width: 64px;
-
+  height: 100svh;
+align-self: stretch;
   justify-content: center;
   align-items: center;
-  background-color: rgba(251, 251, 251, 1);
-  transition: background-color 0.25s;
+  background-color: $bg-secondary-color;
+  transition: $bg-animation;
+  border-right: 1px solid $secondary-color;
 }
 
 .navigation-back:hover {
-  background-color: rgb(236, 244, 253);
+  background-color: $hover-secondary-color;
 }
 
 .profile-info {
@@ -252,7 +266,7 @@ button:hover {
 }
 
 .info-row__input:focus {
-  color: #212529;
+  color: $text-dark;
   background-color: transparent;
   border-color: $secondary-color;
   outline: 0;
@@ -277,28 +291,28 @@ button:hover {
 
 /*  Chat card */
 
-.chatCard {
+.chat-card {
   display: flex;
   flex-direction: row;
-
+  
   height: 47px;
   border-top-style: solid;
-  border-top-color: rgb(226, 226, 226);
+  border-top-color: $secondary-color;
   border-top-width: 1px;
   margin: 0 10px;
   padding: 10px 0;
 }
-.chatCard:focus {
-  background-color: rgba(228, 237, 253, 1);
+.chat-card:focus {
+  background-color: $hover-secondary-color;
 }
 
-.chatCardAvatar {
+.chat-card__avatar {
   border-radius: 50%;
   width: 47px;
   height: 47px;
 }
 
-.chatLastMessage {
+.chat-card__last-message {
   display: flex;
   font-size: 12px;
   margin-top: 3px;
@@ -308,9 +322,10 @@ button:hover {
   padding-left: 10px;
   padding-right: 10px;
   overflow-y: auto;
+  justify-self: stretch;
 }
 
-.chatTitle {
+.chat-card__title {
   font-weight: 600;
   font-size: 13px;
   padding-left: 10px;
@@ -321,7 +336,7 @@ button:hover {
   flex: 1;
 }
 
-.chatUnreadCount {
+.chat-card__unread-count {
   display: flex;
   font-weight: 500;
   font-size: 11px;
@@ -330,73 +345,75 @@ button:hover {
   height: 20px;
   background-color: $primary-color;
   text-align: center;
-  color: aliceblue;
+  color: $text-light;
   align-items: center;
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
 }
-.chatLastMessageBox {
+.chat-card__last-message-box {
   display: flex;
-
   align-items: center;
-
   padding-right: 10px;
   margin: 0px;
   flex: 1;
   align-items: start;
 }
-.chatTitleBox {
+
+.chat-card__title-box {
   height: 16px;
   display: flex;
   align-items: center;
+
 }
-.chatInfoBox {
+.chat-card__info-box {
   display: flex;
+  
   flex-direction: column;
   flex: 1;
 }
-.chatDate {
+.chat-card__date {
   font-weight: 600;
   font-size: 9px;
   margin: 0px;
   padding-right: 10px;
 }
-.chats-list {
-  padding: 0px;
 
-  list-style-type: none;
-}
 chat-card__link {
   color: black !important;
+}
+
+.chats-list {
+  padding: 0px;
+  list-style-type: none;
 }
 .chats-list__item {
   transition: background-color 0.25s;
   color: black !important;
 }
 .chats-list__item:hover {
-  background-color: rgb(224, 231, 236);
+  background-color: $secondary-color;
 }
 
 /* Chat layout */
-.leftPanel {
+.left-panel {
   display: flex;
   align-self: stretch;
   flex-direction: column;
   justify-content: start;
   width: 320px;
   min-width: 200px;
-  background: rgba(251, 251, 251, 1);
+  background: $bg-secondary-color;
   border-right: 1px solid $secondary-color;
   overflow-y: auto;
   -ms-overflow-style: none; /* Edge, Internet Explorer */
   scrollbar-width: none; /* Firefox */
+  resize:horizontal;
 }
-.leftPanel::-webkit-scrollbar {
+.left-panel::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
-
-.rightPanel {
+.right-panel {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -405,12 +422,13 @@ chat-card__link {
   justify-content: start;
   height: 100vh;
 }
+
 .chat-placeholder {
   margin-top: auto;
   margin-bottom: auto;
   align-self: center;
   justify-self: center;
-  color: rgba(153, 153, 153, 1);
+  color: $text-secondary;
 }
 /* Profile bar */
 .profile-bar {
@@ -428,15 +446,13 @@ chat-card__link {
   padding: 0 12px;
 }
 
-.profile-bar__button:hover {
-  background-color: rgb(235, 235, 235);
-}
+
 
 .profile-bar__label {
   display: flex;
   font-weight: 500;
   font-size: 14px;
-  color: rgba(153, 153, 153, 1);
+  color: $text-secondary;
   align-self: center;
   padding-bottom: 3px;
 }
@@ -445,11 +461,13 @@ chat-card__link {
   display: flex;
   width: 6px;
   height: 10px;
-  color: rgba(153, 153, 153, 1);
+  color: $text-secondary;
   align-self: center;
   padding: 6px;
 }
-
+.profile-bar__icon:hover{
+  color: $primary-color;
+}
 /* Search form */
 
 .search-form__input {
@@ -461,7 +479,7 @@ chat-card__link {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: $text-dark;
   border-color: $secondary-color;
   background-color: $secondary-color;
   background-clip: padding-box;
@@ -472,14 +490,14 @@ chat-card__link {
 }
 
 .search-form__input:focus {
-  color: #212529;
+  color: $text-dark;
   background-color: $secondary-color;
   border-color: $secondary-color;
   outline: 0;
 }
 
 .search-form__input::placeholder {
-  color: #212529;
+  color: $text-dark;
   opacity: 0.4;
   font-size: 12px;
 }
@@ -558,7 +576,7 @@ chat-card__link {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: $text-dark;
   border-color: $secondary-color;
   background-color: $secondary-color;
   background-clip: padding-box;
@@ -569,14 +587,14 @@ chat-card__link {
 }
 
 .message-panel__input:focus {
-  color: #212529;
+  color: $text-dark;
   background-color: $secondary-color;
   border-color: $secondary-color;
   outline: 0;
 }
 
 .message-panel__input::placeholder {
-  color: #212529;
+  color: $text-dark;
   opacity: 0.4;
   font-size: 12px;
 }
@@ -617,13 +635,14 @@ chat-card__link {
   font-size: 9px;
   display: flex;
   justify-content: end;
+  color: $text-secondary;
 }
 
 .dialog-message-grid__date {
   align-self: center;
   font-size: 12px;
   margin: 0px;
-  color: rgba(153, 153, 153, 1);
+  color: $text-secondary;
 }
 
 .error-wrapper {
