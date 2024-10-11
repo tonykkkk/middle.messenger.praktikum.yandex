@@ -9,18 +9,18 @@
 Шаблонизатор - handlebars
 
 ## Страницы
-Проект размещен на «[Netlify](tonykkk-messenger.netlify.ru)
+Проект размещен на [Netlify](tonykkk-messenger.netlify.ru)
 Список страниц:
 
-«[Главная страница для входа](tonykkk-messenger.netlify.ru/index.html) : данные для входа - любые
-«[Регистрация пользователя](tonykkk-messenger.netlify.ru/registration.html)
-«[Страница со списком чатов](tonykkk-messenger.netlify.ru/chats.html)
-«[Демо-чат](tonykkk-messenger.netlify.ru/chatAnton.html)
-«[Профиль пользователя](tonykkk-messenger.netlify.ru/profile.html)
-«[Редактирование профиля](tonykkk-messenger.netlify.ru/profileEdit.html)
-«[Изменение пароля](tonykkk-messenger.netlify.ru/passwordChange.html)
-«[Ошибка 404](tonykkk-messenger.netlify.ru/404.html)
-«[Ошибка 5хх](tonykkk-messenger.netlify.ru/500.html)
+- [Главная страница для входа](tonykkk-messenger.netlify.ru/index.html) : данные для входа - любые
+- [Регистрация пользователя](tonykkk-messenger.netlify.ru/registration.html)
+- [Страница со списком чатов](tonykkk-messenger.netlify.ru/chats.html)
+- [Демо-чат](tonykkk-messenger.netlify.ru/chatAnton.html)
+- [Профиль пользователя](tonykkk-messenger.netlify.ru/profile.html)
+- [Редактирование профиля](tonykkk-messenger.netlify.ru/profileEdit.html)
+- [Изменение пароля](tonykkk-messenger.netlify.ru/passwordChange.html)
+- [Ошибка 404](tonykkk-messenger.netlify.ru/404.html)
+- [Ошибка 5хх](tonykkk-messenger.netlify.ru/500.html)
         
 
 
