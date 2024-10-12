@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
+  
   plugins: [
     handlebars({
       partialDirectory: [resolve(__dirname, "src/partials")],
@@ -13,7 +14,7 @@ export default defineConfig({
     outDir: "dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
+        main: resolve(__dirname,"index.html"),
         registration: resolve(__dirname, "registration.html"),
         chats: resolve(__dirname, "chats.html"),
         notfound: resolve(__dirname, "404.html"),
