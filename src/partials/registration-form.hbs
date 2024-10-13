@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/style.scss" />
+<div class="input-container">
+  {{>input-header text="Регистрация"}}
+  <form class="form-vertical" action="chats.html" method="POST">
+    {{>input placeholder="Почта" name="email" type="email" }}
+    {{>input placeholder="Логин" name="login" type="login" }}
+    {{>input placeholder="Имя" name="first_name" type="text" }}
+    {{>input placeholder="Фамилия" name="second_name" type="text" }}
+    {{>input placeholder="Телефон" name="phone" type="tel" }}
+    {{>input placeholder="Пароль"  name="password" type="password" }}
+    {{>input placeholder="Пароль (еще раз)" name="password_again" type="password" }}
+    <div class="space"></div>
+    {{>form-submit buttonName="Зарегистрироваться"}}
+  </form>
+
+  {{>link href="index.html" text="Войти"}}
+</div>
