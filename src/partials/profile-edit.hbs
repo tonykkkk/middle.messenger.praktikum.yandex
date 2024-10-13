@@ -11,7 +11,7 @@
       {{>form-row-edit  caption="Фамилия" name="second_name" type="text" value="Иванов"}}
       {{>form-row-edit  caption="Имя в чате" name="display_name" type="text" value="Иван"}}
       {{>form-row-edit  caption="Телефон" name="phone" type="tel" value="+79099673030"}}
-      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+      {{>form-row-file title="Изменить аватар" name="avatar" }}
       {{>form-submit buttonName="Сохранить"}}
     </form>
   </div>
