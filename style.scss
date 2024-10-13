@@ -66,31 +66,36 @@ input[type="submit"] {
   transition: $bg-animation;
   justify-content: center;
   flex-wrap: nowrap;
+
+  &:hover {
+    background-color: $primary-light-color;
+  }
 }
-input[type="submit"]:hover {
-  background-color: $primary-light-color;
-}
+.row-file,
 button {
   display: flex;
-  height: 40px;
-  width: 100%;
+  flex-basis: 40px;
+  
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.1em 1.2em;
+  padding: 1px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: $primary-color;
-
+align-items: center;
   color: $text-light;
   cursor: pointer;
   transition: background-color 0.25s;
   justify-content: center;
   flex-wrap: nowrap;
+  margin: 10px 0;
+
+  &:hover {
+    background-color: $primary-light-color;
+  }
 }
-button:hover {
-  background-color: $primary-light-color;
-}
+
 
 .link {
   font-size: 13px;
@@ -198,7 +203,7 @@ button:hover {
     line-height: 13px;
   }
 
-  &_link {
+  &__link {
     align-self: flex-end;
     display: flex;
     align-items: end;
@@ -360,7 +365,7 @@ align-self: stretch;
     margin-top: auto;
     margin-bottom: auto;
   }
-  &_last-message-box {
+  &__last-message-box {
     display: flex;
     align-items: center;
     padding-right: 10px;
@@ -574,10 +579,6 @@ align-self: stretch;
   }
 }
 
-
-
-
-
 .message-panel {
   display: flex;
   align-self: stretch;
@@ -623,12 +624,6 @@ align-self: stretch;
     }
   }
 }
-
-
-
-
-
-
 
 .dialog-message_in {
   display: flex;
@@ -685,3 +680,9 @@ align-self: stretch;
   justify-self: center;
   padding: 40px;
 }
+
+
+input[type="file"] {
+  display: none;
+}
+
