@@ -5,17 +5,26 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "start": "vite build && vite"
+    "build": "tsc && vite build",
+    "start": "tsc && vite build && vite"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "eslint-config-love": "^89.0.1",
+    "globals": "^15.11.0",
     "sass-embedded": "^1.79.4",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
     "vite": "^5.4.1"
   },
   "dependencies": {
     "@vituum/vite-plugin-postcss": "^1.1.0",
     "glob": "^11.0.0",
     "lodash-es": "^4.17.21",
+    "stylelint-scss": "^6.8.1",
     "vite-plugin-handlebars": "^2.0.0"
   },
   "engines": {

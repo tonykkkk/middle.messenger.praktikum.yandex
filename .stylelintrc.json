@@ -1,0 +1,22 @@
+{
+    "extends": "stylelint-config-standard-scss",
+    "plugins": [
+    "stylelint-scss"
+    ],
+    "rules": {
+      
+      "scss/at-rule-no-unknown": true,
+      "block-no-empty": true,
+      "color-no-invalid-hex": true,
+      "selector-class-pattern": [
+        "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+        {
+          "resolveNestedSelectors": true,
+          "message": "Expected class selector \"%s\" to match BEM CSS pattern"
+          }
+      ]
+    },
+    "ignoreFiles": [
+      "build/*"
+    ]
+  } 
