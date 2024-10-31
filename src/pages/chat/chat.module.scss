@@ -5,33 +5,41 @@
 
   :global {
     .sidebar {
+      display: flex;
+      flex-direction: column;
       height: 100%;
-      width: 340px;
-      flex: 0 0 340px;
+
       border-right: 1px solid #eaeaea;
+      overflow-y: auto;
+      -ms-overflow-style: none; /* Edge, Internet Explorer */
+      scrollbar-width: none; /* Firefox */
+      resize: horizontal;
 
       &__header {
         border-bottom: 1px solid #eaeaea;
         display: flex;
-        height: 60px;
+        flex-direction: column;
+
         gap: 8px;
         align-items: center;
-        padding: 0 16px;
+        padding: 0 6px;
+
+        align-items: stretch;
       }
 
       &__search {
-        width: 100%;
+        input {
+          display: flex;
+          margin-bottom: 6px;
+          padding: 6px;
+        }
       }
 
       &__content {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 60px);
+
         padding: 0 16px;
-        overflow-y: auto;
-        -ms-overflow-style: none; /* Edge, Internet Explorer */
-        scrollbar-width: none; /* Firefox */
-        resize: horizontal;
       }
     }
 

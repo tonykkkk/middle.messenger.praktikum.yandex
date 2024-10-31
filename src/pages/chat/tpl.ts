@@ -1,10 +1,11 @@
 const tpl = `
 <nav class="sidebar">
   <section class="sidebar__header">
+    {{{profileButton}}}
     <div class="sidebar__search">
     {{{search}}}
     </div>
-    {{{profileButton}}}
+    
   </section>
   <div class="sidebar__content">
     {{{chatItems}}}

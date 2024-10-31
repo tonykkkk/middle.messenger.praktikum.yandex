@@ -85,6 +85,9 @@ class Chat extends Block {
           tagName: 'a',
           propsAndChildren: {
             label: 'Профиль',
+            attr: {
+              href: './profile',
+            },
           },
         }),
         buttonSubmit: new ButtonSubmit(),
