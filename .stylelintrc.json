@@ -14,7 +14,13 @@
           "resolveNestedSelectors": true,
           "message": "Expected class selector \"%s\" to match BEM CSS pattern"
           }
-      ]
+      ],
+      "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
     },
     "ignoreFiles": [
       "build/*"

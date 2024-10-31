@@ -1,36 +1,44 @@
-// class EventBus {
-//     listeners:Object;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type EmitProps = any | undefined
+type Callback = (args: EmitProps) => void
+type Listeners = Record<string, Array<Callback>>
+class EventBus {
+  listeners: Listeners
 
-//     constructor() {
-//         this.listeners = {};
-//     }
+  constructor() {
+    this.listeners = {}
+  }
 
-//     on(event: Object, callback: Function) {
+  on(event: string, callback: () => void) {
+    if (event && typeof event === 'string') {
+      if (!this.listeners?.[event]) {
+        this.listeners[event] = []
+      }
 
-//         if (!this.listeners[event]) {
-//             this.listeners[event] = [];
-//         }
+      this.listeners[event].push(callback)
+    }
+  }
 
-//         this.listeners[event].push(callback);
-//     }
+  off(event: string, callback: Callback) {
+    if (event && typeof event === 'string') {
+      if (!this.listeners[event]) {
+        throw new Error(`Нет события: ${event}`)
+      }
+      this.listeners[event] = this.listeners[event].filter((listener) => listener !== callback)
+    }
+  }
 
-//     off(event: string, callback: Function) {
-//         if (!this.listeners[event]) {
-//             throw new Error(`Нет события: ${event}`);
-//         }
-//         this.listeners[event] = this.listeners[event].filter(
-//             listener => listener !== callback
-//           );
-//     }
+  emit(event: string, props?: EmitProps): void {
+    if (event && typeof event === 'string') {
+      if (!this.listeners[event]) {
+        throw new Error(`Нет события: ${event}`)
+      }
 
-//     emit(event: string, ...args: any) {
+      this.listeners[event].forEach((listener) => {
+        listener(props)
+      })
+    }
+  }
+}
 
-//         if (!this.listeners[event]) {
-//             throw new Error(`Нет события: ${event}`);
-//     }
-
-//     this.listeners[event].forEach(listener => {
-//         listener(...args);
-//     });
-//     }
-// } 
+export default EventBus

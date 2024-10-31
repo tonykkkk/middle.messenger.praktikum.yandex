@@ -1,17 +1,4 @@
-$primary-color: rgb(51 105 243);
-
-// $secondary-color: rgb(201, 201, 201);
-$secondary-color: rgb(234 234 234);
-$bg-secondary-color: rgb(251 251 251);
-$hover-secondary-color: rgb(236 244 253);
-$primary-light-color: rgb(87 132 245);
-$message-background-in: rgb(248 248 248);
-$message-background-out: rgb(228 237 253);
-$text-dark: rgb(0 0 0);
-$text-light: white;
-$text-secondary: rgb(153 153 153);
-$invalid: rgb(243 80 51); 
-$bg-animation: background-color 0.25s;
+@import "theme";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -609,7 +596,7 @@ align-self: stretch;
   }
 }
 
-.dialog-message_in {
+.dialog-message--in {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
@@ -620,7 +607,7 @@ align-self: stretch;
   margin: 10px;
 }
 
-.dialog-message_out {
+.dialog-message--out {
   display: flex;
   align-self: flex-end;
   background-color: $message-background-out;
