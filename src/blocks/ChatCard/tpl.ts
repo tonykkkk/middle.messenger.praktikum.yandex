@@ -11,6 +11,6 @@ const tpl = `
     <div class="chat-item-date">{{date}}</div>
     <div class="chat-item-count">{{count}}</div>
   </div>
-`;
+`
 
-export default tpl;
+export default tpl

@@ -31,6 +31,6 @@ const tpl = `
       {{{buttonSubmit}}}
   </section>
 </section>
-`;
+`
 
-export default tpl;
+export default tpl

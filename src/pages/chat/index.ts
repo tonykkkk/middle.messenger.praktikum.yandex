@@ -1,11 +1,11 @@
-import Button from '../../blocks/Button';
-import ChatItem from '../../blocks/ChatCard';
-import MessageItem from '../../blocks/Message';
-import Search from '../../blocks/Search';
-import { Block } from '../../blocks/Block';
-import { validator } from '../../utils/validator';
-import styles from './chat.module.scss';
-import tpl from './tpl';
+import Button from '../../blocks/Button'
+import ChatItem from '../../blocks/ChatCard'
+import MessageItem from '../../blocks/Message'
+import Search from '../../blocks/Search'
+import { Block } from '../../blocks/Block'
+import { validator } from '../../utils/validator'
+import styles from './chat.module.scss'
+import tpl from './tpl'
 
 class ButtonSubmit extends Block {
   constructor() {
@@ -17,28 +17,28 @@ class ButtonSubmit extends Block {
         },
         events: {
           click: () => {
-            const message = document.querySelector('#message');
-            const messageValue = (message as HTMLInputElement)?.value;
+            const message = document.querySelector('#message')
+            const messageValue = (message as HTMLInputElement)?.value
             const isMessageValid = validator(
               messageValue,
               message as HTMLElement,
               'message',
-              'message'
-            );
+              'message',
+            )
 
             if (isMessageValid) {
-              console.log(message);
+              console.log(message)
             }
           },
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile('', {
       ...this._props,
-    });
+    })
   }
 }
 
@@ -55,20 +55,20 @@ class MessageField extends Block {
         },
         events: {
           blur: (e: FocusEvent) => {
-            const { value } = <HTMLInputElement>e.target;
-            console.log(value, 'value');
+            const { value } = <HTMLInputElement>e.target
+            console.log(value, 'value')
 
-            e.target && validator(value, e.target as HTMLElement, 'message', 'message');
+            e.target && validator(value, e.target as HTMLElement, 'message', 'message')
           },
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile('', {
       ...this._props,
-    });
+    })
   }
 }
 
@@ -123,16 +123,16 @@ class Chat extends Block {
           class: styles.chat,
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile(tpl, {
       ...this._props,
-    });
+    })
   }
 }
 
-const chat = (): Chat => new Chat();
+const chat = (): Chat => new Chat()
 
-export default chat;
+export default chat

@@ -2,7 +2,6 @@ import { v4 as makeUUID } from 'uuid'
 import Handlebars from 'handlebars'
 import EventBus from '../../utils/EventBus'
 
-
 export interface BlockProps {
   tagName?: string
   propsAndChildren?: PropsAndChildren

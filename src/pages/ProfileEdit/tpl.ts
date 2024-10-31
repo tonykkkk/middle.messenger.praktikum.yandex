@@ -9,6 +9,6 @@ const tpl = `
 	  {{{buttons}}}
 	</div>
       </section>
-`;
+`
 
-export default tpl;
+export default tpl

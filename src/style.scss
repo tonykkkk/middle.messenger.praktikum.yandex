@@ -1,4 +1,4 @@
-@import "theme";
+@import 'theme';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -36,7 +36,7 @@ main,
   align-self: center;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   display: flex;
   height: 40px;
   border-radius: 8px;
@@ -68,7 +68,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: $primary-color;
-align-items: center;
+  align-items: center;
   color: $text-light;
   cursor: pointer;
   transition: background-color 0.25s;
@@ -80,7 +80,6 @@ align-items: center;
     background-color: $primary-light-color;
   }
 }
-
 
 .link {
   font-size: 13px;
@@ -117,13 +116,13 @@ align-items: center;
   align-self: stretch;
 
   &:focus {
-  color: $text-dark;
-  background-color: transparent;
-  border-color: transparent;
-  outline: 0;
-  border-bottom: $primary-color;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
+    color: $text-dark;
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    border-bottom: $primary-color;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
   }
 
   &::placeholder {
@@ -138,7 +137,6 @@ align-items: center;
     border-bottom-width: 1px;
   }
 }
-
 
 .space {
   height: 80px;
@@ -196,7 +194,7 @@ align-items: center;
     height: 27px;
     color: $primary-color;
   }
-  
+
   &__input {
     align-self: flex-end;
     font-size: 13px;
@@ -210,7 +208,7 @@ align-items: center;
     border-bottom: $primary-color;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-  
+
     &:focus {
       color: $text-dark;
       background-color: transparent;
@@ -223,14 +221,11 @@ align-items: center;
   }
 }
 
-
-
-
 .navigation-back {
   display: flex;
   width: 64px;
   height: 100svh;
-align-self: stretch;
+  align-self: stretch;
   justify-content: center;
   align-items: center;
   background-color: $bg-secondary-color;
@@ -242,33 +237,26 @@ align-self: stretch;
   }
 }
 
-
-
 .profile-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin: 40px 250px;
-  margin-bottom: auto; 
+  margin-bottom: auto;
 
   &__avatar {
-  align-self: center;
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  padding: 10px;
-}
+    align-self: center;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+  }
 
   &__header {
-  display: flex;
-  align-self: center;
+    display: flex;
+    align-self: center;
+  }
 }
-}
-
-
-
-
-
 
 .form-vertical {
   display: flex;
@@ -297,13 +285,13 @@ align-self: stretch;
   &:focus {
     background-color: $hover-secondary-color;
   }
-  
+
   &__avatar {
     border-radius: 50%;
     width: 47px;
     height: 47px;
   }
-  
+
   &__last-message {
     display: flex;
     font-size: 12px;
@@ -316,7 +304,7 @@ align-self: stretch;
     overflow-y: auto;
     justify-self: stretch;
   }
-  
+
   &__title {
     font-weight: 600;
     font-size: 13px;
@@ -327,7 +315,7 @@ align-self: stretch;
     line-height: 15px;
     flex: 1;
   }
-  
+
   &__unread-count {
     display: flex;
     font-weight: 500;
@@ -351,12 +339,11 @@ align-self: stretch;
     flex: 1;
     align-items: start;
   }
-  
+
   &__title-box {
     height: 16px;
     display: flex;
     align-items: center;
-  
   }
 
   &__info-box {
@@ -371,12 +358,11 @@ align-self: stretch;
     margin: 0;
     padding-right: 10px;
   }
-  
+
   &__link {
     color: black !important;
   }
 }
-
 
 .chats-list {
   padding: 0;
@@ -385,14 +371,12 @@ align-self: stretch;
   &__item {
     transition: background-color 0.25s;
     color: black !important;
-  
+
     &:hover {
       background-color: $secondary-color;
     }
   }
 }
-
-
 
 /* Chat layout */
 .left-panel {
@@ -407,7 +391,7 @@ align-self: stretch;
   overflow-y: auto;
   -ms-overflow-style: none; /* Edge, Internet Explorer */
   scrollbar-width: none; /* Firefox */
-  resize:horizontal;
+  resize: horizontal;
 
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -438,39 +422,35 @@ align-self: stretch;
   align-items: center;
   padding: 6px 0;
 
+  &__button {
+    display: flex;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0 12px;
+  }
 
-&__button {
-  display: flex;
-  height: 30px;
-  border-radius: 8px;
-  padding: 0 12px;
-}
+  &__label {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    color: $text-secondary;
+    align-self: center;
+    padding-bottom: 3px;
+  }
 
+  &__icon {
+    display: flex;
+    width: 6px;
+    height: 10px;
+    color: $text-secondary;
+    align-self: center;
+    padding: 6px;
 
-
-&__label {
-  display: flex;
-  font-weight: 500;
-  font-size: 14px;
-  color: $text-secondary;
-  align-self: center;
-  padding-bottom: 3px;
-}
-
-&__icon {
-  display: flex;
-  width: 6px;
-  height: 10px;
-  color: $text-secondary;
-  align-self: center;
-  padding: 6px;
-
-  &:hover{
-    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
-}
-
 
 /* Search form */
 
@@ -494,15 +474,13 @@ align-self: stretch;
     border-color: $secondary-color;
     outline: 0;
   }
-  
+
   &::placeholder {
     color: $text-dark;
     opacity: 0.4;
     font-size: 12px;
   }
 }
-
-
 
 /* Dialog */
 
@@ -536,8 +514,6 @@ align-self: stretch;
   margin: 0 10px;
 }
 
-
-
 .dialog-message-grid {
   display: flex;
   flex: 1;
@@ -565,7 +541,7 @@ align-self: stretch;
     width: 32px;
     align-self: center;
   }
-  
+
   &__input {
     flex: 1;
     height: 32px;
@@ -580,14 +556,14 @@ align-self: stretch;
     border: 1px solid $secondary-color;
     border-radius: 0.5rem;
     margin: 0 10px;
-  
+
     &:focus {
       color: $text-dark;
       background-color: $secondary-color;
       border-color: $secondary-color;
       outline: 0;
     }
-    
+
     &::placeholder {
       color: $text-dark;
       opacity: 0.4;
@@ -651,8 +627,6 @@ align-self: stretch;
   padding: 40px;
 }
 
-
-input[type="file"] {
+input[type='file'] {
   display: none;
 }
-

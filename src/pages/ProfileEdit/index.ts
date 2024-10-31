@@ -1,16 +1,16 @@
-import { Block, BlockProps } from '../../blocks/Block';
-import tpl from './tpl';
-import styles from './profileEdit.module.scss';
-import Button from '../../blocks/Button';
-import ProfileSidebar from '../../blocks/BackButton';
-import FormItem from '../../blocks/FormItem';
-import Input from '../../blocks/Input';
+import { Block, BlockProps } from '../../blocks/Block'
+import tpl from './tpl'
+import styles from './profileEdit.module.scss'
+import Button from '../../blocks/Button'
+import ProfileSidebar from '../../blocks/BackButton'
+import FormItem from '../../blocks/FormItem'
+import Input from '../../blocks/Input'
 import { validator } from '../../utils/validator'
 
 interface EditingProfileFormProps extends BlockProps {
   propsAndChildren: {
-    formItems: Block[];
-  };
+    formItems: Block[]
+  }
 }
 
 class EditingProfileForm extends Block {
@@ -24,11 +24,11 @@ class EditingProfileForm extends Block {
           class: styles['editing-profile-form'],
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
-    return this.compile('{{{formItems}}}', this._props);
+    return this.compile('{{{formItems}}}', this._props)
   }
 }
 
@@ -46,57 +46,57 @@ class EditingProfile extends Block {
               type: 'primary',
               events: {
                 click: () => {
-                  const firstName = document.querySelector('#first_name');
-                  const firstNameValue = (firstName as HTMLInputElement)?.value;
-                  const secondName = document.querySelector('#second_name');
-                  const secondNameValue = (secondName as HTMLInputElement)?.value;
-                  const displayName = document.querySelector('#display_name');
-                  const displayNameValue = (displayName as HTMLInputElement)?.value;
-                  const login = document.querySelector('#login');
-                  const loginValue = (login as HTMLInputElement)?.value;
-                  const email = document.querySelector('#email');
-                  const emailValue = (email as HTMLInputElement)?.value;
-                  const phone = document.querySelector('#phone');
-                  const phoneValue = (phone as HTMLInputElement)?.value;
-                  const oldPassword = document.querySelector('#oldPassword');
-                  const oldPasswordValue = (oldPassword as HTMLInputElement)?.value;
-                  const newPassword = document.querySelector('#newPassword');
-                  const newPasswordValue = (newPassword as HTMLInputElement)?.value;
-                  const form = document.querySelector('#editingProfile');
+                  const firstName = document.querySelector('#first_name')
+                  const firstNameValue = (firstName as HTMLInputElement)?.value
+                  const secondName = document.querySelector('#second_name')
+                  const secondNameValue = (secondName as HTMLInputElement)?.value
+                  const displayName = document.querySelector('#display_name')
+                  const displayNameValue = (displayName as HTMLInputElement)?.value
+                  const login = document.querySelector('#login')
+                  const loginValue = (login as HTMLInputElement)?.value
+                  const email = document.querySelector('#email')
+                  const emailValue = (email as HTMLInputElement)?.value
+                  const phone = document.querySelector('#phone')
+                  const phoneValue = (phone as HTMLInputElement)?.value
+                  const oldPassword = document.querySelector('#oldPassword')
+                  const oldPasswordValue = (oldPassword as HTMLInputElement)?.value
+                  const newPassword = document.querySelector('#newPassword')
+                  const newPasswordValue = (newPassword as HTMLInputElement)?.value
+                  const form = document.querySelector('#editingProfile')
 
                   const isFirstNameValid = validator(
                     firstNameValue,
                     firstName,
                     'name',
-                    'first_name'
-                  );
+                    'first_name',
+                  )
                   const isSecondNameValid = validator(
                     secondNameValue,
                     secondName,
                     'name',
-                    'second_name'
-                  );
+                    'second_name',
+                  )
                   const isDisplayNameValid = validator(
                     displayNameValue,
                     displayName,
                     'displayName',
-                    'display_name'
-                  );
-                  const isLoginValid = validator(loginValue, login, 'login', 'login');
-                  const isEmailValid = validator(emailValue, email, 'email', 'email');
-                  const isPhoneValid = validator(phoneValue, phone, 'phone', 'phone');
+                    'display_name',
+                  )
+                  const isLoginValid = validator(loginValue, login, 'login', 'login')
+                  const isEmailValid = validator(emailValue, email, 'email', 'email')
+                  const isPhoneValid = validator(phoneValue, phone, 'phone', 'phone')
                   const isOldPasswordValid = validator(
                     oldPasswordValue,
                     oldPassword,
                     'password',
-                    'oldPassword'
-                  );
+                    'oldPassword',
+                  )
                   const isNewPasswordValid = validator(
                     newPasswordValue,
                     newPassword,
                     'password',
-                    'newPassword'
-                  );
+                    'newPassword',
+                  )
 
                   if (
                     isFirstNameValid &&
@@ -117,9 +117,9 @@ class EditingProfile extends Block {
                       phone: phoneValue,
                       oldPassword: oldPasswordValue,
                       newPassword: newPasswordValue,
-                    });
+                    })
                   } else {
-                    form?.classList.add('error');
+                    form?.classList.add('error')
                   }
                 },
               },
@@ -150,8 +150,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          e.target && validator(value, e.target as Element, 'name', 'first_name');
+                          const { value } = <HTMLInputElement>e.target
+                          e.target && validator(value, e.target as Element, 'name', 'first_name')
                         },
                       },
                     },
@@ -173,8 +173,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          e.target && validator(value, e.target as Element, 'name', 'second_name');
+                          const { value } = <HTMLInputElement>e.target
+                          e.target && validator(value, e.target as Element, 'name', 'second_name')
                         },
                       },
                     },
@@ -196,9 +196,9 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
+                          const { value } = <HTMLInputElement>e.target
                           e.target &&
-                            validator(value, e.target as Element, 'displayName', 'display_name');
+                            validator(value, e.target as Element, 'displayName', 'display_name')
                         },
                       },
                     },
@@ -220,8 +220,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          e.target && validator(value, e.target as Element, 'login', 'login');
+                          const { value } = <HTMLInputElement>e.target
+                          e.target && validator(value, e.target as Element, 'login', 'login')
                         },
                       },
                     },
@@ -243,8 +243,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          e.target && validator(value, e.target as Element, 'email', 'email');
+                          const { value } = <HTMLInputElement>e.target
+                          e.target && validator(value, e.target as Element, 'email', 'email')
                         },
                       },
                     },
@@ -266,8 +266,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          e.target && validator(value, e.target as Element, 'phone', 'phone');
+                          const { value } = <HTMLInputElement>e.target
+                          e.target && validator(value, e.target as Element, 'phone', 'phone')
                         },
                       },
                     },
@@ -289,8 +289,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          validator(value, e.target as Element, 'password', 'oldPassword');
+                          const { value } = <HTMLInputElement>e.target
+                          validator(value, e.target as Element, 'password', 'oldPassword')
                         },
                       },
                     },
@@ -312,8 +312,8 @@ class EditingProfile extends Block {
                       },
                       events: {
                         blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target;
-                          validator(value, e.target as Element, 'password', 'newPassword');
+                          const { value } = <HTMLInputElement>e.target
+                          validator(value, e.target as Element, 'password', 'newPassword')
                         },
                       },
                     },
@@ -330,14 +330,14 @@ class EditingProfile extends Block {
           class: styles['editing-profile'],
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
-    return this.compile(tpl, this._props);
+    return this.compile(tpl, this._props)
   }
 }
 
-const editingProfile = (): EditingProfile => new EditingProfile();
+const editingProfile = (): EditingProfile => new EditingProfile()
 
-export default editingProfile;
+export default editingProfile

@@ -3,6 +3,6 @@ const tpl = `
     {{text}}
     <span class="message-item-time">{{time}}</span>
   </div>
-`;
+`
 
-export default tpl;
+export default tpl

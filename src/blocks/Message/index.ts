@@ -1,13 +1,13 @@
-import styles from './message.module.scss';
-import tpl from './tpl';
-import { Block, BlockProps } from '../../blocks/Block';
+import styles from './message.module.scss'
+import tpl from './tpl'
+import { Block, BlockProps } from '../../blocks/Block'
 
 interface MessageProps extends BlockProps {
   propsAndChildren: {
-    type: 'in' | 'out';
-    text: string;
-    time: string;
-  };
+    type: 'in' | 'out'
+    text: string
+    time: string
+  }
 }
 
 class MessageItem extends Block {
@@ -20,14 +20,14 @@ class MessageItem extends Block {
           class: styles['message-item'],
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile(tpl, {
       ...this._props,
-    });
+    })
   }
 }
 
-export default MessageItem;
+export default MessageItem

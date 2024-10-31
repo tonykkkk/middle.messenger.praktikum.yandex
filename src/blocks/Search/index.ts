@@ -1,12 +1,12 @@
-import { Block, BlockProps } from '../../blocks/Block';
-import styles from './search.module.scss';
+import { Block, BlockProps } from '../../blocks/Block'
+import styles from './search.module.scss'
 
 interface SearchProps extends BlockProps {
   propsAndChildren: {
     attr: {
-      placeholder: string;
-    };
-  };
+      placeholder: string
+    }
+  }
 }
 
 class Search extends Block {
@@ -20,14 +20,14 @@ class Search extends Block {
           class: styles.search,
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile('{{search}}', {
       ...this._props,
-    });
+    })
   }
 }
 
-export default Search;
+export default Search

@@ -1,15 +1,15 @@
-import styles from './chatCard.module.scss';
-import tpl from './tpl';
-import { Block, BlockProps } from '../../blocks/Block';
+import styles from './chatCard.module.scss'
+import tpl from './tpl'
+import { Block, BlockProps } from '../../blocks/Block'
 
 interface ChatCardProps extends BlockProps {
   propsAndChildren: {
-    icon: string;
-    name: string;
-    text: string;
-    date: string;
-    count: string;
-  };
+    icon: string
+    name: string
+    text: string
+    date: string
+    count: string
+  }
 }
 
 class ChatItem extends Block {
@@ -22,14 +22,14 @@ class ChatItem extends Block {
           class: styles['chat-item'],
         },
       },
-    });
+    })
   }
 
   render(): DocumentFragment {
     return this.compile(tpl, {
       ...this._props,
-    });
+    })
   }
 }
 
-export default ChatItem;
+export default ChatItem
