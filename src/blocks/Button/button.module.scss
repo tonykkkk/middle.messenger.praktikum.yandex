@@ -1,0 +1,47 @@
+@import './../../theme';
+
+.button {
+  font-family: Poppins, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+  height: 36px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  transition: 0.25s;
+  cursor: pointer;
+  text-wrap: nowrap;
+  align-items: center;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+}
+
+.link {
+  border: none;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-light-color;
+  }
+}
+
+.primary {
+  background-color: $primary-color;
+  color: $text-light;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $primary-light-color;
+    color: $text-light;
+  }
+}
+
+.warning {
+  border: none;
+  color: red;
+}
