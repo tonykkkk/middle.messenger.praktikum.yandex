@@ -17,7 +17,7 @@ class Profile extends Block {
             propsAndChildren: {
               label: 'Изменить данные',
               attr: {
-                href: '../editingProfile',
+                href: '../profile/edit',
               },
             },
           }),
@@ -25,6 +25,9 @@ class Profile extends Block {
             tagName: 'a',
             propsAndChildren: {
               label: 'Изменить пароль',
+              attr: {
+                href: '../profile/passwordChange',
+              },
             },
           }),
           new Button({

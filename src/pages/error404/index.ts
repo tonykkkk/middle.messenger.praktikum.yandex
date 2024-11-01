@@ -12,7 +12,7 @@ const error404 = (): Error =>
         propsAndChildren: {
           label: 'Назад к чатам',
           attr: {
-            href: './',
+            href: '/',
           },
         },
       }),
