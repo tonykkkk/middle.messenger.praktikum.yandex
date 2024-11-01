@@ -19,7 +19,7 @@ export enum Pages {
   Chat = '/chat',
 }
 
-export const routs: Record<Pages, () => Block> = {
+export const routes: Record<Pages, () => Block> = {
   '/': main,
   '/login': login,
   '/registration': registration,

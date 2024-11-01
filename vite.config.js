@@ -21,6 +21,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
+        login: resolve(root, 'login.html'),
       },
     },
   },
