@@ -7,14 +7,14 @@ import FormItem from '../../blocks/FormItem'
 import Input from '../../blocks/Input'
 import { validator } from '../../utils/validator'
 
-interface EditingProfileFormProps extends BlockProps {
+interface ProfileEditFormProps extends BlockProps {
   propsAndChildren: {
     formItems: Block[]
   }
 }
 
-class EditingProfileForm extends Block {
-  constructor(props: EditingProfileFormProps) {
+class ProfileEditForm extends Block {
+  constructor(props: ProfileEditFormProps) {
     super({
       ...props,
       tagName: 'form',
@@ -32,7 +32,7 @@ class EditingProfileForm extends Block {
   }
 }
 
-class EditingProfile extends Block {
+class ProfileEdit extends Block {
   constructor() {
     super({
       tagName: 'main',
@@ -132,7 +132,7 @@ class EditingProfile extends Block {
             },
           }),
         ],
-        editingForm: new EditingProfileForm({
+        editingForm: new ProfileEditForm({
           propsAndChildren: {
             formItems: [
               new FormItem({
@@ -274,52 +274,6 @@ class EditingProfile extends Block {
                   }),
                 },
               }),
-              new FormItem({
-                tagName: 'div',
-                propsAndChildren: {
-                  label: 'Старый пароль',
-                  id: 'oldPassword',
-                  input: new Input({
-                    tagName: 'input',
-                    propsAndChildren: {
-                      attr: {
-                        id: 'oldPassword',
-                        name: 'oldPassword',
-                        type: 'password',
-                      },
-                      events: {
-                        blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target
-                          validator(value, e.target as Element, 'password', 'oldPassword')
-                        },
-                      },
-                    },
-                  }),
-                },
-              }),
-              new FormItem({
-                tagName: 'div',
-                propsAndChildren: {
-                  label: 'Новый пароль',
-                  id: 'newPassword',
-                  input: new Input({
-                    tagName: 'input',
-                    propsAndChildren: {
-                      attr: {
-                        id: 'newPassword',
-                        name: 'newPassword',
-                        type: 'password',
-                      },
-                      events: {
-                        blur: (e) => {
-                          const { value } = <HTMLInputElement>e.target
-                          validator(value, e.target as Element, 'password', 'newPassword')
-                        },
-                      },
-                    },
-                  }),
-                },
-              }),
             ],
           },
         }),
@@ -338,6 +292,6 @@ class EditingProfile extends Block {
   }
 }
 
-const editingProfile = (): EditingProfile => new EditingProfile()
+const profileEdit = (): ProfileEdit => new ProfileEdit()
 
-export default editingProfile
+export default profileEdit

@@ -1,12 +1,31 @@
 @import './../../theme';
 
 .input {
-  border: none;
-  border-bottom: 1px solid #1e1e1e;
-  transition: 0.3s;
+  flex: 1;
+  height: 32px;
+  padding: 8px 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-dark;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid $secondary-color;
+  border-radius: 6px;
+  margin: 6 0;
 
   &:focus,
   &:focus-visible {
-    border-color: #3369f3;
+    color: $text-dark;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: $text-dark;
+    opacity: 0.4;
+    font-size: 12px;
   }
 }

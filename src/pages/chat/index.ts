@@ -97,10 +97,10 @@ class Chat extends Block {
             tagName: 'button',
             propsAndChildren: {
               icon: '../../assets/icons/Ellipse.svg',
-              name: 'Андрей',
+              name: 'Иван',
               text: 'Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный',
-              date: '10:49',
-              count: '4',
+              date: '08:15',
+              count: '10',
             },
           }),
         ],

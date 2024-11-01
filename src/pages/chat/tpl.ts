@@ -13,9 +13,9 @@ const tpl = `
 </nav>
 
 <section class="chat-body">
-  <nav class="chat-body_header">
+  <nav class="chat-body__header">
     <div class="chat-body__user">
-      <div class="chat-body_icon"></div>
+      <div class="chat-body__icon"></div>
         <div class="chat-body__name">{{userName}}</div>
       </div>
   </nav>

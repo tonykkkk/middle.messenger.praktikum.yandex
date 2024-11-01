@@ -1,12 +1,14 @@
+@import './../../theme';
+
 .profile-sidebar {
   position: absolute;
   left: 0;
   top: 0;
-  width: 120px;
+  width: 80px;
   height: 100%;
   border: none;
-  background-color: #eaeaea5a;
-  border-right: 1px solid #eaeaea;
+  background-color: $bg-secondary-color;
+  border-right: 1px solid $secondary-color;
   transition: 0.3s;
   cursor: pointer;
 
@@ -15,7 +17,7 @@
     display: block;
     position: absolute;
     top: 50%;
-    left: 34%;
+    left: 30%;
     width: 34px;
     height: 34px;
     background-image: url('../../assets/icons/ArrowButton.svg');
@@ -26,6 +28,6 @@
   }
 
   &:hover {
-    background-color: #eaeaea;
+    background-color: $secondary-color;
   }
 }

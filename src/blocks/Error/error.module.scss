@@ -14,6 +14,9 @@
       overflow: hidden;
       flex-flow: column wrap;
       font-weight: 500;
+      border-radius: 20px;
+      box-shadow: 0 0 5px $secondary-color;
+      padding: 30px 60px;
     }
 
     .error-text {

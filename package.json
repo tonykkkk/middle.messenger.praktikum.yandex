@@ -8,7 +8,9 @@
     "build": "npx stylelint \"**/*.scss\" && tsc && vite build",
     "start": "npx stylelint \"**/*.scss\" && tsc && vite build && vite",
     "stylelint": "npx stylelint",
-    "eslint": "npx eslint"
+    "eslint": "npx eslint",
+    "lint": "eslint \"./src/**/*.@(ts)\"",
+    "lint:fix": "eslint \"./src/**/*.@(ts)\" --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
