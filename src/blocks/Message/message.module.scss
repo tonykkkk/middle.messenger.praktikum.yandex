@@ -1,0 +1,45 @@
+@import './../../theme';
+
+.message-item {
+  width: 100%;
+  margin-top: 16px;
+  height: fit-content;
+
+  :global {
+    .message-item-text {
+      position: relative;
+      width: fit-content;
+      max-width: 50%;
+      padding: 10px 10px 30px;
+      border-radius: 12px;
+      line-height: 20px;
+
+      &.in {
+        border-top-left-radius: 0;
+        background-color: $message-background-in;
+        margin: 0 auto 0 0;
+
+        & .chat-body-message-time {
+          color: $secondary-color;
+        }
+      }
+
+      &.out {
+        border-bottom-right-radius: 0;
+        background-color: $message-background-out;
+        margin: 0 0 0 auto;
+
+        & .chat-body-message-time {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .message-item-time {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+    }
+  }
+}
